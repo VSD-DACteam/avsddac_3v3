@@ -47,8 +47,8 @@ to design a potentiometric dac and know its characteristics. Digital to Analog c
 |VREFH|Reference voltage high|||3.3|V|T=40 to 85C|
 |VREFL|Reference voltage low|0|||V|T=40 to 85C|
 |RES|Resolution| |10||bit|T=27C|
-|INL|Integral Non-linearity||?||LSB|T=27C|
-|DNL|Differential non-linearity||?||LSB|T=27C|
+|INL|Integral Non-linearity||20||LSB|T=27C|
+|DNL|Differential non-linearity||-2.9 to +2.2||LSB|T=27C|
 |Tconv|Conversion time|?|||us|T=27C|
 |IDDA|Analog supply current||?|?|uA|2 values at T=27C, one with EN=1 and one with conversion rate=1millionsample/sec|
 |IDDA|Analog supply current||?||nA|T=27C, Data change =1million sample/sec|
@@ -168,6 +168,7 @@ Run the netlist file using the following command.
 $  ngspice 10bitdac.cir
 ```
 The obtained graph shows the voltages outputs for first 32 values i.e digital code 0-31. Note down the displayed values which will be used for plotting  vout/vref vs digital code graph using a plotting software. Here, SciDavis plotting software is used. The graph appears like the one shown below:
+![voutref_frst](https://user-images.githubusercontent.com/68046197/87030173-da819200-c1fe-11ea-93d1-a81e882843bc.JPG)
 
 ## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
@@ -176,6 +177,8 @@ The differential nonlinearity (DNL), sometimes referred to as differential error
 DNL(LSB)= (Actual height- Ideal height)/1LSB
 ```
 The DNL vs digital code graph is shown below:
+![DNL_start](https://user-images.githubusercontent.com/68046197/87030203-e4a39080-c1fe-11ea-96de-b60502b1dd98.JPG)
+
 
 ## To obtain INL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
@@ -185,7 +188,7 @@ the line between zero and full scale excluding the effects of zero code and full
 INL(LSB)= (Actual vout-Reference vout)/1LSB
 ```
 The INL vs Digital code graph is shown below:
-
+![INL_lsb_start](https://user-images.githubusercontent.com/68046197/87030191-dfdedc80-c1fe-11ea-8436-e72332d7582c.JPG)
 # Magic Vlsi layout design steps:
 
 Now to open Magic and start designing the layout, paste the below command in the terminal
