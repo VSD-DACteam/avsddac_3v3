@@ -64,7 +64,8 @@ to design a potentiometric dac and know its characteristics. Digital to Analog c
 2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for code 0-31. The values will be updated as they are retrieved.
 3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
 4) Post-Layout simulations are yet to be done. Will be updated soon.
-5) Few parameters are yet to be updated.
+5) PNR is pending.
+6) Few parameters are yet to be updated.
 # Open Source EDA Tools used to design the IP
 ``` LTSpice XVII ```-LTspice® is a high performance SPICE simulation software, schematic capture and waveform viewer with enhancements and models for easing the simulation of analog circuits.
 
