@@ -63,6 +63,7 @@ to design a potentiometric dac and know its characteristics. Digital to Analog c
 1) The target dimensions of the IP are 195.58X117.45 (widthXheight). The achieved dimensions are greater than the expected. We are looking into other ways of designing the layout like lclayout to give better results in terms of size.
 2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for code 0-31. The values will be updated as they are retrieved.
 3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
+4) Post-Layout simulations are yet to be done. Will be updated soon.
 
 # Open Source EDA Tools used to design the IP
 ``` LTSpice XVII ```-LTspice® is a high performance SPICE simulation software, schematic capture and waveform viewer with enhancements and models for easing the simulation of analog circuits.
@@ -141,7 +142,7 @@ Cloning a github repository creates a local copy of a remote repo and this allow
 ```
 $  sudo apt install -y git
 $  git clone https://github.com/VSD-DACteam/avsddac.git
-$  cd avsddac/simulations/prelayout
+$  cd avsddac/prelayout
 ```
 # Pre-layout Simulations
 
@@ -218,8 +219,12 @@ To exit from magic, use the following command in tkcon window
 ```
 quit
 ```
+## 10bit layout
+The picture below shows the layout of a 10bit potentiometricdigital-to-analog converter
+![10bitlayout](https://user-images.githubusercontent.com/68046197/87032694-a0b28a80-c202-11ea-93cf-fa3feb9705af.JPG)
+
 ## Post-layout simulations
-Once the magic file is extrated to spice, a .spice file is created. Copy the data from this file and create a separate document with .sp extention. Now, add voltage sources and transient alaysis statement and the control statements . This is now ready for simulation. The spice file for 6bit(10bit will be uploaded soon) has been uploaded in the repository. Similar to what has been done with pre-layout, open ngspice and run the .sp file. Copy and paste the commands given below one by one in the terminal.
+Once the magic file is extrated to spice, a .spice file is created. Copy the data from this file and create a separate document with .sp extention. Now, add voltage sources and transient alaysis statement and the control statements . This is now ready for simulation. Similar to what has been done with pre-layout, open ngspice and run the .sp file. Copy and paste the commands given below one by one in the terminal.
 
 ```
 $ ngspice
@@ -228,8 +233,15 @@ $ source filename.sp
 
 Now, note the values displayed here and follow a similar process given for pre-lauout simulation and plot in SciDavis
 
-## To obtain Vout/Vref vs digital code characteristics @T=27C
+```to be updated```
 
-## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
+# Authors
+Bellana Avinash Naidu, Neelam Buddhiram Chaurasiya, Jayasri Veeravilli
 
-## To obtain INL vs digital code characteristics @T=27C and VREF&VDD=3.3
+# Contact information
+- Bellana Avinash, B.Tech, NIT Rourkela, avinashbellana@gmail.com
+- Neelam Buddhiram Chaurasiya, BE-Degree, VESIT Mumbai, chaurasiyaneelam001@gmail.com
+- Jayasri Veeravilli, B.Tech, SRM University, jayasriveeravilli@gmail.com
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+- Philipp Gühring, Software Architect, LibreSilicon Assocation pg@futureware.at
+
