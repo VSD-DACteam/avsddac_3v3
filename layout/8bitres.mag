@@ -1,0 +1,64 @@
+magic
+tech scmos
+timestamp 1594196821
+<< nwell >>
+rect 707 19 708 22
+<< metal1 >>
+rect 619 -27 620 -24
+rect 542 -32 545 -28
+rect 389 -188 390 -184
+<< m2contact >>
+rect 441 566 446 570
+rect 707 19 712 23
+rect 608 -6 613 -2
+rect 796 -10 805 -5
+rect 539 -47 543 -42
+rect 118 -735 123 -731
+<< metal2 >>
+rect 418 566 441 570
+rect 418 92 421 566
+rect 707 -3 710 19
+rect 749 0 799 3
+rect 613 -6 710 -3
+rect 796 -5 799 0
+rect 539 -42 543 -41
+rect 516 -47 539 -43
+rect 118 -731 121 -728
+<< m3contact >>
+rect 417 87 422 92
+rect 742 0 749 4
+rect 511 -47 516 -42
+rect 118 -728 123 -724
+<< metal3 >>
+rect 418 81 421 87
+rect 735 0 742 3
+rect 507 -47 511 -44
+rect 118 -724 121 -721
+<< m4contact >>
+rect 417 76 422 81
+rect 728 0 735 4
+rect 502 -47 507 -43
+rect 118 -721 123 -717
+<< metal4 >>
+rect 418 3 421 76
+rect 418 0 728 3
+rect 502 -49 506 -47
+rect 118 -52 506 -49
+rect 118 -717 121 -52
+use 7bitres  7bitres_0
+timestamp 1594196481
+transform 1 0 0 0 1 3
+box 0 -3 830 747
+use vsdswitch  vsdswitch_0
+timestamp 1594101072
+transform 1 0 536 0 1 -24
+box 1 -21 83 22
+use 7bitres  7bitres_1
+timestamp 1594196481
+transform -1 0 830 0 1 -751
+box 0 -3 830 747
+<< labels >>
+rlabel metal1 620 -27 620 -24 1 out_eight
+rlabel metal1 390 -188 390 -184 1 res_out_8
+rlabel metal1 542 -32 542 -28 1 D7!
+<< end >>

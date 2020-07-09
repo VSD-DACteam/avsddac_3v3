@@ -1,0 +1,47 @@
+magic
+tech scmos
+timestamp 1594241837
+<< metal1 >>
+rect -3 467 25 470
+rect -3 283 0 467
+rect -3 280 24 283
+rect 20 277 24 280
+rect 287 255 289 258
+rect 212 250 213 254
+rect 112 71 115 106
+rect 112 68 119 71
+<< m2contact >>
+rect 113 444 120 448
+rect 200 277 208 282
+rect 202 237 208 243
+rect 112 106 116 113
+<< metal2 >>
+rect 111 444 113 447
+rect 111 431 114 444
+rect 112 240 115 241
+rect 112 237 202 240
+rect 208 237 212 240
+rect 112 113 115 237
+<< m3contact >>
+rect 111 425 115 431
+rect 194 277 200 283
+<< metal3 >>
+rect 111 285 114 425
+rect 111 283 200 285
+rect 111 282 194 283
+use 5bitres  5bitres_0
+timestamp 1594241837
+transform 1 0 0 0 1 14
+box 2 272 408 642
+use vsdswitch  vsdswitch_0
+timestamp 1594101072
+transform 1 0 205 0 1 258
+box 1 -21 83 22
+use 5bitres  5bitres_1
+timestamp 1594241837
+transform 1 0 -1 0 1 -362
+box 2 272 408 642
+<< labels >>
+rlabel metal1 289 255 289 258 1 out_six
+rlabel metal1 212 250 212 254 1 D5!
+<< end >>

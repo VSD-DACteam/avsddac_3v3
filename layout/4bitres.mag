@@ -1,0 +1,37 @@
+magic
+tech scmos
+timestamp 1594108877
+<< metal1 >>
+rect 184 158 185 161
+rect 107 153 112 157
+rect 178 141 195 144
+<< m2contact >>
+rect 181 249 186 253
+rect 190 206 196 211
+rect 173 179 178 183
+rect 190 144 195 149
+rect 6 138 11 142
+rect 365 138 370 142
+<< metal2 >>
+rect 182 183 185 249
+rect 178 179 185 183
+rect 190 149 196 206
+rect 195 144 196 149
+rect 6 142 11 144
+rect 11 138 365 141
+use vsdswitch  vsdswitch_0
+timestamp 1594101072
+transform 1 0 101 0 1 161
+box 1 -21 83 22
+use 3bitres  3bitres_0
+timestamp 1594108877
+transform 1 0 79 0 1 142
+box -91 -2 106 179
+use 3bitres  3bitres_1
+timestamp 1594108877
+transform -1 0 297 0 -1 319
+box -91 -2 106 179
+<< labels >>
+rlabel metal1 185 158 185 161 1 out_four
+rlabel metal1 107 153 107 157 1 D3!
+<< end >>

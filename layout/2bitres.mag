@@ -1,0 +1,67 @@
+magic
+tech scmos
+timestamp 1594103684
+<< metal1 >>
+rect 3 68 12 69
+rect 6 64 12 68
+rect 90 66 101 69
+rect -14 53 -9 56
+rect -14 50 14 53
+rect -14 43 -9 50
+rect 3 23 8 35
+rect 11 26 14 50
+rect 17 39 21 46
+rect 90 44 93 66
+rect 180 44 182 47
+rect 101 39 107 43
+rect 90 26 102 29
+rect 3 18 12 23
+rect -14 7 -9 10
+rect -14 4 14 7
+rect -14 -3 -9 4
+rect 3 -20 8 -11
+rect 11 -20 14 4
+rect 17 -7 21 0
+rect 90 -2 93 26
+<< m2contact >>
+rect 17 46 21 51
+rect 17 0 21 5
+<< metal2 >>
+rect 17 28 21 46
+rect -14 25 21 28
+rect 17 5 21 25
+use resistor2  resistor2_0
+timestamp 1594100343
+transform -1 0 0 0 1 58
+box -9 -7 15 11
+use resistor2  resistor2_1
+timestamp 1594100343
+transform 1 0 -6 0 1 37
+box -9 -7 15 11
+use vsdswitch  vsdswitch_0
+timestamp 1594101072
+transform 1 0 10 0 1 47
+box 1 -21 83 22
+use vsdswitch  vsdswitch_2
+timestamp 1594101072
+transform 1 0 98 0 1 47
+box 1 -21 83 22
+use resistor2  resistor2_2
+timestamp 1594100343
+transform -1 0 0 0 1 12
+box -9 -7 15 11
+use resistor2  resistor2_3
+timestamp 1594100343
+transform 1 0 -6 0 1 -9
+box -9 -7 15 11
+use vsdswitch  vsdswitch_1
+timestamp 1594101072
+transform 1 0 10 0 1 1
+box 1 -21 83 22
+<< labels >>
+rlabel metal1 3 69 8 69 5 res_in
+rlabel metal1 3 -20 8 -20 1 res_out
+rlabel metal1 101 39 101 43 1 D1!
+rlabel metal1 182 44 182 47 7 out_two
+rlabel metal2 -14 25 -14 28 3 D0!
+<< end >>
