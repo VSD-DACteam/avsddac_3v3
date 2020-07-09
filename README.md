@@ -177,7 +177,7 @@ DNL(LSB)= (Actual height- Ideal height)/1LSB
 ```
 The DNL vs digital code graph is shown below:
 
-## To obtain DNL vs digital code characteristics @T=27C
+## To obtain INL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
 The relative accuracy or integral nonlinearity (INL), sometimes referred to as linearity error, is the maximum deviation of the output from
 the line between zero and full scale excluding the effects of zero code and full-scale errors.
@@ -215,8 +215,18 @@ To exit from magic, use the following command in tkcon window
 ```
 quit
 ```
+## Post-layout simulations
+Once the magic file is extrated to spice, a .spice file is created. Copy the data from this file and create a separate document with .sp extention. Now, add voltage sources and transient alaysis statement and the control statements . This is now ready for simulation. The spice file for 6bit(10bit will be uploaded soon) has been uploaded in the repository. Similar to what has been done with pre-layout, open ngspice and run the .sp file. Copy and paste the commands given below one by one in the terminal.
 
+```
+$ ngspice
+$ source filename.sp
+```
 
+Now, note the values displayed here and follow a similar process given for pre-lauout simulation and plot in SciDavis
 
+## To obtain Vout/Vref vs digital code characteristics @T=27C
 
+## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
+## To obtain INL vs digital code characteristics @T=27C and VREF&VDD=3.3
