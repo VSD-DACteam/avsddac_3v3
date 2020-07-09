@@ -62,6 +62,7 @@ to design a potentiometric dac and know its characteristics. Digital to Analog c
 # Future work
 1) The target dimensions of the IP are 195.58X117.45 (widthXheight). The achieved dimensions are greater than the expected. We are looking into other ways of designing the layout like lclayout to give better results in terms of size.
 2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for code 0-31. The values will be updated as they are retrieved.
+3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
 
 # Open Source EDA Tools used to design the IP
 ``` LTSpice XVII ```-LTspice® is a high performance SPICE simulation software, schematic capture and waveform viewer with enhancements and models for easing the simulation of analog circuits.
@@ -133,6 +134,88 @@ clear
 5. You have successfully added osu180nm.tech file!
 
 6. Just open the terminal and type ```magic -T osu180nm.tech filename.mag``` to begin layout.
+
+# Steps to clone the IP onto UNIX based systems
+Cloning a github repository creates a local copy of a remote repo and this allows us to make any changes to the files locally without affecting the main repository. To clone the IP onto your system copy paste the commands given below one after the other.
+
+```
+$  sudo apt install -y git
+$  git clone https://github.com/VSD-DACteam/avsddac.git
+$  cd avsddac/simulations/prelayout
+```
+# Pre-layout Simulations
+
+*Note: Before you begin to simulate make sure that the model files i.e the .lib files uploaded in this respository are in the same directory that contains the .cir files.
+
+To enter the Ngspice Shell, open the terminal & type:
+```
+$ ngspice
+```
+To simulate a netlist, type:
+```
+ngspice 1 ->  source <filename>.cir
+```
+
+You can exit from the Ngspice Shell by typing:
+```
+ngspice 1 ->  quit
+```
+## To obtain Vout/Vref vs digital code characteristics @T=27C
+
+Open your terminal and change the working directory to the folder where your netlist file is saved.
+Run the netlist file using the following command.
+```
+$  ngspice 10bitdac.cir
+```
+The obtained graph shows the voltages outputs for first 32 values i.e digital code 0-31. Note down the displayed values which will be used for plotting  vout/vref vs digital code graph using a plotting software. Here, SciDavis plotting software is used. The graph appears like the one shown below:
+
+## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
+
+The differential nonlinearity (DNL), sometimes referred to as differential error, is the difference between the measured and ideal 1LSB amplitude change of any two adjacent codes. Using the values noted earlier and the formula given below find all the DNL values. These vaues are uploaded in the repository with the name `DNL`.
+```
+DNL(LSB)= (Actual height- Ideal height)/1LSB
+```
+The DNL vs digital code graph is shown below:
+
+## To obtain DNL vs digital code characteristics @T=27C
+
+The relative accuracy or integral nonlinearity (INL), sometimes referred to as linearity error, is the maximum deviation of the output from
+the line between zero and full scale excluding the effects of zero code and full-scale errors.
+```
+INL(LSB)= (Actual vout-Reference vout)/1LSB
+```
+The INL vs Digital code graph is shown below:
+
+# Magic Vlsi layout design steps:
+
+Now to open Magic and start designing the layout, paste the below command in the terminal
+```
+$ magic -T osu180nm.tech filename.mag
+```
+This creates a .mag file to design your layout. DAC requires hierarchial designing i.e we have create instances of lower level blocks to built an overall dac.
+To create an instance type in the following command in the tkcon window that open along with the magic layout window.
+```
+getcell blockname.mag
+```
+
+After the layout is designed, it is time to save the layout. Use the below command to save layout
+```
+save filename.mag
+```
+To generate the netlist use the following commands in the magic interpreter.
+```
+extract all
+```
+```
+ext2spice -cthresh -rthresh filename.ext
+```
+This saves a file with the extention .spice which is our required netlist.
+
+To exit from magic, use the following command in tkcon window
+```
+quit
+```
+
 
 
 
