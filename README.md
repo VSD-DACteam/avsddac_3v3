@@ -163,7 +163,8 @@ ngspice 1 ->  source <filename>.cir
 
 ![prelayout](https://user-images.githubusercontent.com/68046197/87139148-22ff8500-c2bd-11ea-9aa4-d45c5aa45103.jpg)
 
-*note: The above graph is the hardcopy generated from ngspice. The staircase output is not clearly seen as the hardcopy distinguishes various colors using dashed and dotted lines. To have a look at a better picture, please navigate to ```prelayout_plot``` uploaded in the repository.
+*note: The above graph is the hardcopy generated from ngspice. The staircase output is not clearly seen as the hardcopy distinguishes between various colors using dashed and dotted lines. To have a look at a better picture, please navigate to ```prelayout_plot``` uploaded in the repository.*
+
 You can exit from the Ngspice Shell by typing:
 ```
 ngspice 1 ->  quit
