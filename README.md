@@ -1,6 +1,5 @@
 # POTENTIOMETRIC DIGITAL-TO-ANALOG CONVERTER
-The project aims at designing a `potentiometric digital-to-analog converter` using end-to-end `open-source EDA` tools. The key idea is to design the IP to achieve specifications
-similar to the target specifications using `osu180nm`.
+The project aims at designing a `potentiometric digital-to-analog converter` using end-to-end `open-source EDA` tools. The key idea is to design the IP to achieve specifications similar to the target specifications using `osu180nm`.
 
 # Why digital-to-analog converter?
 A computer is designed to work in a digital domain.In today's world, the existence of digital electronics is boundless.Despite such advancement,the world is yet analogous and this seems to be inevitable. Hence,there is a need for a bridge between the digital and analog domains.On that account,there comes a need for digital-to-analog and analog-to-digital converters. 
@@ -43,8 +42,8 @@ With the advent of high performance digital circuits,the need for data converter
 |VREFH|Reference voltage high|||3.3|V|T=40 to 85C|
 |VREFL|Reference voltage low|0|||V|T=40 to 85C|
 |RES|Resolution| |10||bit|T=27C|
-|INL|Integral Non-linearity||20||LSB|T=27C|
-|DNL|Differential non-linearity||-2.9 to +2.2||LSB|T=27C|
+|INL|Integral Non-linearity||9.6||LSB|T=27C|
+|DNL|Differential non-linearity||-1.6 to +0.6||LSB|T=27C|
 |Tconv|Conversion time|?|||us|T=27C|
 |IDDA|Analog supply current||?|?|uA|2 values at T=27C, one with EN=1 and one with conversion rate=1millionsample/sec|
 |IDDA|Analog supply current||?||nA|T=27C, Data change =1million sample/sec|
