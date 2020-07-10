@@ -142,7 +142,7 @@ Cloning a github repository creates a local copy of a remote repo and this allow
 
 ```
 $  sudo apt install -y git
-$  git clone https://github.com/VSD-DACteam/avsddac.git
+$  git clone https://github.com/VSD-DACteam/avsddac_3v3.git
 $  cd avsddac_3v3/pre-layout
 ```
 # Pre-layout Simulations
