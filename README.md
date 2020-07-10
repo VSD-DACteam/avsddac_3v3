@@ -26,12 +26,12 @@ With the advent of high performance digital circuits,the need for data converter
 
 | Parameter| Description| Min | Type | Max | Unit | Condition |
 | :---:  | :-: | :-: | :-: | :---:  | :-: | :-: |
-|RL|Load resistance| 50|||Mohm|T=40 to 85C|
-|CL|Load capacitance|||1|pF|T=40 to 85C|
-|VDDA|Analog supply| |3.3||V|T=40 to 85C|
-|VDD|Digital supply voltage||1.8||V|T=40 to 85C|
-|VREFH|Reference voltage high|||3.3|V|T=40 to 85C|
-|VREFL|Reference voltage low|0|||V|T=40 to 85C|
+|RL|Load resistance| 50|||Mohm|T=-40 to 85C|
+|CL|Load capacitance|||1|pF|T=-40 to 85C|
+|VDDA|Analog supply| |3.3||V|T=-40 to 85C|
+|VDD|Digital supply voltage||1.8||V|T=-40 to 85C|
+|VREFH|Reference voltage high|||3.3|V|T=-40 to 85C|
+|VREFL|Reference voltage low|0|||V|T=-40 to 85C|
 |RES|Resolution| |10||bit|T=27C|
 |INL|Integral Non-linearity||9.6||LSB|T=27C|
 |DNL|Differential non-linearity||-1.6 to +0.6||LSB|T=27C|
