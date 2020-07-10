@@ -3,14 +3,10 @@ The project aims at designing a `potentiometric digital-to-analog converter` usi
 similar to the target specifications using `osu180nm`.
 
 # Why digital-to-analog converter?
-A computer is designed to work in a digital domain.In today's world, the existence of digital electronics is boundless.Despite such advancement,the world is yet analogous 
-and this seems to be inevitable. Hence,there is a need for a bridge between the digital and analog domains.On that account,there comes a need for digital-to-analog and
-analog-to-digital converters. 
+A computer is designed to work in a digital domain.In today's world, the existence of digital electronics is boundless.Despite such advancement,the world is yet analogous and this seems to be inevitable. Hence,there is a need for a bridge between the digital and analog domains.On that account,there comes a need for digital-to-analog and analog-to-digital converters. 
 
 # Quick glance of the IP
-With the advent of high performance digital circuits,the need for data converters with high speed and accuracy for a wide range of applications has drawn the attention
-of scientists and researchers worldwide.In this project we tried to design a potentiometric digital-to-analog converter.This repository consists of all the details required
-to design a potentiometric dac and know its characteristics. Digital to Analog converter(DAC) is a device that converts the digital signals to analog signals. It reconstructs the sampled data into an analog signal . The digital data might be produced from Field programmable gate array(FPGA) or a microprocessor or Application specific integrated circuit(ASIC) but in order to interact with the real world, the data requires conversion to analog signal.DAC converter have various architectures like Kelvin divider (String DAC), Segmented string DAC and Digital potentiometer (slightly modified Kelvin DAC).The slightly modified version of Kelvin DAC is the potentiometric DAC. The key idea is to design a `10 bit potentiometric DAC` with 3.3v analog voltage, 1.8v digital voltage and 1 off-chip external voltage reference using osu180nm tech node. To develop an insight into the project and its specifications, download the `pdac_IP` pdf document uploaded in this repository. Also, to get better understanding of the IP read the ```potentiometric DAC``` file uploaded above.The dimentions of the designed IP are 333.20X151.20 (widtheXheight).
+With the advent of high performance digital circuits,the need for data converters with high speed and accuracy for a wide range of applications has drawn the attention of scientists and researchers worldwide.In this project we tried to design a potentiometric digital-to-analog converter.This repository consists of all the details required to design a potentiometric dac and know its characteristics. Digital to Analog converter(DAC) is a device that converts the digital signals to analog signals. It reconstructs the sampled data into an analog signal . The digital data might be produced from Field programmable gate array(FPGA) or a microprocessor or Application specific integrated circuit(ASIC) but in order to interact with the real world, the data requires conversion to analog signal.DAC converter have various architectures like Kelvin divider (String DAC), Segmented string DAC and Digital potentiometer (slightly modified Kelvin DAC).The slightly modified version of Kelvin DAC is the potentiometric DAC. The key idea is to design a `10 bit potentiometric DAC` with 3.3v analog voltage, 1.8v digital voltage and 1 off-chip external voltage reference using osu180nm tech node. To develop an insight into the project and its specifications, download the `pdac_IP` pdf document uploaded in this repository. Also, to get better understanding of the IP read the ```potentiometric DAC``` file uploaded above.The dimentions of the designed IP are 333.20X151.20 (widtheXheight).
 
 # Device in action
 ![symbol](https://user-images.githubusercontent.com/68046197/87008502-77353700-c1e1-11ea-8298-f75e5a0534a6.jpg)
@@ -61,7 +57,7 @@ to design a potentiometric dac and know its characteristics. Digital to Analog c
 
 # Future work
 1) The target dimensions of the IP are 195.58X117.45 (widthXheight). The achieved dimensions are greater than the expected. We are looking into other ways of designing the layout like lclayout to give better results in terms of size.
-2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for code 0-31. The values will be updated as they are retrieved.
+2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for digital code 0-62. The values will be updated as and when they are found through simulation.
 3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
 4) Post-Layout simulations are yet to be done. Will be updated soon.
 5) PNR is pending.
@@ -176,8 +172,8 @@ Run the netlist file using the following command.
 ```
 $  ngspice 10bitdac.cir
 ```
-The obtained graph shows the voltages outputs for first 32 values i.e digital code 0-31. Note down the displayed values which will be used for plotting  vout/vref vs digital code graph using a plotting software. Here, SciDavis plotting software is used. The graph appears like the one shown below:
-![voutref_frst](https://user-images.githubusercontent.com/68046197/87030173-da819200-c1fe-11ea-93d1-a81e882843bc.JPG)
+The obtained graph shows the voltages outputs for first 64 values i.e digital code 0-62. Note down the displayed values which will be used for plotting  vout/vref vs digital code graph using a plotting software. Here, SciDavis plotting software is used. The graph appears like the one shown below:
+![voutvref](https://user-images.githubusercontent.com/68046197/87149916-bee5bc80-c2ce-11ea-8ba6-b90dfeb35a25.JPG)
 
 ## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
@@ -186,8 +182,8 @@ The differential nonlinearity (DNL), sometimes referred to as differential error
 DNL(LSB)= (Actual height- Ideal height)/1LSB
 ```
 The DNL vs digital code graph is shown below:
-![DNL_start](https://user-images.githubusercontent.com/68046197/87030203-e4a39080-c1fe-11ea-96de-b60502b1dd98.JPG)
 
+![dnl](https://user-images.githubusercontent.com/68046197/87149911-bbeacc00-c2ce-11ea-95db-2c3d323362b6.JPG)
 
 ## To obtain INL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
@@ -197,7 +193,7 @@ the line between zero and full scale excluding the effects of zero code and full
 INL(LSB)= (Actual vout-Reference vout)/1LSB
 ```
 The INL vs Digital code graph is shown below:
-![INL_lsb_start](https://user-images.githubusercontent.com/68046197/87030191-dfdedc80-c1fe-11ea-8436-e72332d7582c.JPG)
+![inl](https://user-images.githubusercontent.com/68046197/87149912-bdb48f80-c2ce-11ea-8898-6aa4a859b667.JPG)
 # Magic Vlsi layout design steps:
 
 Now to open Magic and start designing the layout, paste the below command in the terminal
@@ -239,7 +235,7 @@ $ ngspice
 $ source filename.sp
 ```
 
-Now, note the values displayed here and follow a similar process given for pre-lauout simulation and plot in SciDavis
+Now, note the values displayed and follow a similar process given for pre-layout simulation and plot in SciDavis.
 
 ```to be updated```
 
