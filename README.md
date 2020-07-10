@@ -143,7 +143,7 @@ Cloning a github repository creates a local copy of a remote repo and this allow
 ```
 $  sudo apt install -y git
 $  git clone https://github.com/VSD-DACteam/avsddac.git
-$  cd avsddac/prelayout
+$  cd avsddac_3v3/pre-layout
 ```
 # Pre-layout Simulations
 
@@ -157,7 +157,13 @@ To simulate a netlist, type:
 ```
 ngspice 1 ->  source <filename>.cir
 ```
+## 10 bitdac vout vs digital code graph
 
+*note: Due to huge runtime, simulation is done for the first 64 digtal codes. This will be update as and when output for other codes is simulated.
+
+![prelayout](https://user-images.githubusercontent.com/68046197/87139148-22ff8500-c2bd-11ea-9aa4-d45c5aa45103.jpg)
+
+*note: The above graph is the hardcopy generated from ngspice. The staircase output is not clearly seen as the hardcopy distinguishes various colors using dashed and dotted lines. To have a look at a better picture, please navigate to ```prelayout_plot``` uploaded in the repository.
 You can exit from the Ngspice Shell by typing:
 ```
 ngspice 1 ->  quit
