@@ -12,16 +12,7 @@ With the advent of high performance digital circuits,the need for data converter
 # Terminal Functions
 | Name | No. | I/O  | Description | 
 | :---:  | :-: | :-: | :-: |
-| D9 | 1 | I | Digital input bit (msb) |
-| D8| 2 | I |  Digital input bit |
-| D7 | 3 | I |  Digital input bit |
-| D6 | 4 | I |  Digital input bit |
-| D5 | 5 | I |  Digital input bit |
-| D4 | 6 | I |  Digital input bit |
-| D3 | 7 | I |  Digital input bit |
-| D2 | 8 | I |  Digital input bit |
-| D1 | 9 | I |  Digital input bit |
-| D0 | 10 | I |  Digital input bit (lsb)|
+| D[0:9] | 1-10 | I | Digital input bit (msb) |
 | EN | 11 | I | Enable pin |
 | VDD | 12 | I | Digital power supply(1.8) |
 | VSS | 13 | I |  Digital ground|
