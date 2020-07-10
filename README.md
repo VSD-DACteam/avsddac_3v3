@@ -44,11 +44,6 @@ With the advent of high performance digital circuits,the need for data converter
 |RES|Resolution| |10||bit|T=27C|
 |INL|Integral Non-linearity||9.6||LSB|T=27C|
 |DNL|Differential non-linearity||-1.6 to +0.6||LSB|T=27C|
-|Tconv|Conversion time|?|||us|T=27C|
-|IDDA|Analog supply current||?|?|uA|2 values at T=27C, one with EN=1 and one with conversion rate=1millionsample/sec|
-|IDDA|Analog supply current||?||nA|T=27C, Data change =1million sample/sec|
-|IDD|Digital supply current||?|?|uA|2 values at T=27C, one with EN=1 and one with conversion rate=1millionsample/sec|
-|IDD|Digital supply current||?||nA|T=27C, Data change =1million sample/sec|
 
 1) Integral nonlinearity (INL), also referred to as linearity error, is the maximum deviation of the output from the line between zero and full scale excluding the effects of zero code and full-scale errors. The INL is calculated for code 0-31. 
 2) The differential nonlinearity (DNL), sometimes referred to as differential error, is the difference between the measured and ideal 1LSB amplitude change of any two adjacent codes. The DNL is calculated for code 0-31. 
