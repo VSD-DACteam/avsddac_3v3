@@ -36,13 +36,13 @@ With the advent of high performance digital circuits,the need for data converter
 |INL|Integral Non-linearity||9.6||LSB|T=27C|
 |DNL|Differential non-linearity||-1.6 to +0.6||LSB|T=27C|
 
-1) Integral nonlinearity (INL), also referred to as linearity error, is the maximum deviation of the output from the line between zero and full scale excluding the effects of zero code and full-scale errors. The INL is calculated for code 0-31. 
-2) The differential nonlinearity (DNL), sometimes referred to as differential error, is the difference between the measured and ideal 1LSB amplitude change of any two adjacent codes. The DNL is calculated for code 0-31. 
+1) Integral nonlinearity (INL), also referred to as linearity error, is the maximum deviation of the output from the line between zero and full scale excluding the effects of zero code and full-scale errors. The INL is calculated for code 0-63. 
+2) The differential nonlinearity (DNL), sometimes referred to as differential error, is the difference between the measured and ideal 1LSB amplitude change of any two adjacent codes. The DNL is calculated for code 0-63. 
 
 
 # Future work
 1) The target dimensions of the IP are 195.58X117.45 (widthXheight). The achieved dimensions are greater than the expected. We are looking into other ways of designing the layout like lclayout to give better results in terms of size.
-2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for digital code 0-62. The values will be updated as and when they are found through simulation.
+2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for digital code 0-63. The values will be updated as and when they are found through simulation.
 3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
 4) PNR is pending.
 5) Few parameters are yet to be updated.
@@ -127,7 +127,9 @@ $  cd avsddac_3v3/pre-layout
 ```
 # Pre-layout Simulations
 
-*Note: Before you begin to simulate make sure that the model files i.e the .lib files uploaded in this respository are in the same directory that contains the .cir files.
+*Note: Before you begin to simulate make sure that the model files i.e the .lib files uploaded in this respository are in the same directory that contains the .cir files.*
+
+*All the details on how to design the schematics using LTspice have been mentioned in the README file of the folder 'pre-layout' of this repository.*
 
 To enter the Ngspice Shell, open the terminal & type:
 ```
