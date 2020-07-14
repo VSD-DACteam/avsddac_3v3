@@ -222,7 +222,26 @@ $ source filename.sp
 
 Now, note the values displayed and follow a similar process given for pre-layout simulation and plot in SciDavis.
 
-```to be updated```
+## Vout/Vref vs digital code characteristics @T=27C
+The graph below shows post-layout Vout/Vref Vs digital code chaacteristics for the 0-64.
+![voutvrefpost](https://user-images.githubusercontent.com/68046197/87395672-5d279a00-c5cf-11ea-80f5-4978c9f8026c.JPG)
+
+## DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
+The below graph shows the DNL values for the digital code ranging from 0-63.
+![DNL post layout](https://user-images.githubusercontent.com/68046197/87395685-6284e480-c5cf-11ea-9c4b-4bc4398a52e8.JPG)
+
+## INL vs digital code characteristics @T=27C and VREF&VDD=3.3
+The plot shows the INL values for digital code ranging from 0-63.
+![NewINL(0-63) (1)](https://user-images.githubusercontent.com/68046197/87395681-5f89f400-c5cf-11ea-93b8-c88036a4aa97.png)
+
+| Parameter| pre-layout (LSB)| postlayout (LSB) |
+| :---:  | :-: | :-: |
+|DNL|-1.6 to +0.6|-1.5 to +0.59 |
+|INL|+9.6|+9.5 |
+It can been seen that both the pre-layout and post-layout characteristics for 0-6 digital code are in good match.
+
+For any support, please contact the administrator or report in ```issues``` in Github.
+
 
 # Authors
 Bellana Avinash Naidu, Neelam Buddhiram Chaurasiya, Jayasri Veeravilli
