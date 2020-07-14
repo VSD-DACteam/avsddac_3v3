@@ -246,7 +246,7 @@ The plot shows the INL values for digital code ranging from 0-63.
 |INL|+9.6|+9.5 |
 
 
-It can been seen that both the pre-layout and post-layout characteristics for 0-6 digital code are in good match.
+It can been seen that both the pre-layout and post-layout characteristics for 0-63 digital code are in good match.
 
 For any support, please contact the administrator or report in ```issues``` in Github.
 
