@@ -44,9 +44,8 @@ With the advent of high performance digital circuits,the need for data converter
 1) The target dimensions of the IP are 195.58X117.45 (widthXheight). The achieved dimensions are greater than the expected. We are looking into other ways of designing the layout like lclayout to give better results in terms of size.
 2) Due to the complexity of the circuit, the runtime is huge. Hence, for now INL and DNL are calculated for digital code 0-62. The values will be updated as and when they are found through simulation.
 3) The layout has to be verified in openroad to check the compatibilty of the designed IP.
-4) Post-Layout simulations are yet to be done. Will be updated soon.
-5) PNR is pending.
-6) Few parameters are yet to be updated.
+4) PNR is pending.
+5) Few parameters are yet to be updated.
 # Open Source EDA Tools used to design the IP
 ``` LTSpice XVII ```-LTspice® is a high performance SPICE simulation software, schematic capture and waveform viewer with enhancements and models for easing the simulation of analog circuits.
 
@@ -158,7 +157,7 @@ Run the netlist file using the following command.
 $  ngspice 10bitdac.cir
 ```
 The obtained graph shows the voltages outputs for first 64 values i.e digital code 0-62. Note down the displayed values which will be used for plotting  vout/vref vs digital code graph using a plotting software. Here, SciDavis plotting software is used. The graph appears like the one shown below:
-![voutvref](https://user-images.githubusercontent.com/68046197/87149916-bee5bc80-c2ce-11ea-8ba6-b90dfeb35a25.JPG)
+![voutvref](https://user-images.githubusercontent.com/68046197/87396861-19ce2b00-c5d1-11ea-8c99-f35a8496c17c.JPG)
 
 ## To obtain DNL vs digital code characteristics @T=27C and VREF&VDD=3.3
 
@@ -210,7 +209,8 @@ quit
 ```
 ## 10bit layout
 The picture below shows the layout of a 10bit potentiometricdigital-to-analog converter
-![10bitlayout](https://user-images.githubusercontent.com/68046197/87032694-a0b28a80-c202-11ea-93cf-fa3feb9705af.JPG)
+
+![10bitlayoutfinal](https://user-images.githubusercontent.com/68046197/87396877-20f53900-c5d1-11ea-929f-0a4c3751fafb.JPG)
 
 ## Post-layout simulations
 Once the magic file is extrated to spice, a .spice file is created. Copy the data from this file and create a separate document with .sp extention. Now, add voltage sources and transient alaysis statement and the control statements . This is now ready for simulation. Similar to what has been done with pre-layout, open ngspice and run the .sp file. Copy and paste the commands given below one by one in the terminal.
