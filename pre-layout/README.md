@@ -29,7 +29,7 @@ Follow the steps given below to install Ltspice simulator in Ubuntu.
 ![ltspice main window](https://user-images.githubusercontent.com/67196401/85849253-452ada80-b7c8-11ea-9d3d-79e5e875a459.PNG)
 2) Follow this to open new schematic `File -> new -> new schematic`. This is clearly shown in the figure below.
 ![file-new schematic](https://user-images.githubusercontent.com/67196401/85849240-3fcd9000-b7c8-11ea-915d-8e252a8ad51c.png)
-3) Have a look at the circuit diagrm given in the readme file and place components accordingly and complete the design. Designig the 10bit dac requires symbols and subcircuits to make the task easier. The components tab is shown in the figue below.
+3) Have a look at the circuit diagrm given in the readme file and place components accordingly and complete the design. Replace the 10k resistor with 250ohm resistor and 5k resisotr with 125ohm resistor to get results similar to the one given in pre-layout simulations. Designig the 10bit dac requires symbols and subcircuits to make the task easier. The components tab is shown in the figue below.
 ![edit-component](https://user-images.githubusercontent.com/67196401/85849237-3e03cc80-b7c8-11ea-88f8-e45040e358dc.png)
 4) Add the osu180nm libraries on the schematic using `.include` command. The libraries are uploaded in the repository.
 5) This way all the subcircuits are designed. 
